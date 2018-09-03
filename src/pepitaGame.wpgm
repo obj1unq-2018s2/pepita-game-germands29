@@ -21,19 +21,9 @@ program PepitaGame {
 	game.addVisualCharacter(roque)
 	
 	game.whenCollideDo(roque, {algo => algo.teEncontro(roque)})
-	/* 
-	game.whenCollideDo( manzana, {roque => roque.encuentraComida(manzana)
-										game.removeVisual(manzana)
-										
-		} )
-	game.whenCollideDo( alpiste, {roque => roque.encuentraComida(alpiste)
-										game.removeVisual(alpiste)
-		} )
-	
-	game.whenCollideDo( pepita, {roque => roque.darleDeComer()
-								game.addVisualIn(roque.comidaActual(), game.at(3,2))
-	})	
-*/
+
+
+
 //	TECLADO
 	keyboard.v().onPressDo { pepita.volaHacia(villaGesell) }
 	keyboard.b().onPressDo { pepita.volaHacia(buenosAires) }

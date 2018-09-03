@@ -35,5 +35,6 @@ object pepita {
 	
 	method teEncontro(alguien){
 		alguien.darleDeComer(self)
+		
 	}
 }

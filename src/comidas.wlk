@@ -6,6 +6,7 @@ object manzana {
 	method energia() = 80
 	method teEncontro(alguien){
 		alguien.encuentraComida(self)
+		game.removeVisual(self)
 	}
 }
 object alpiste {
@@ -13,5 +14,6 @@ object alpiste {
 	method energia() = 5
 	method teEncontro(alguien){
 		alguien.encuentraComida(self)
+		game.removeVisual(self)
 	}
 }
