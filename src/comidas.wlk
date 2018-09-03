@@ -15,6 +15,5 @@ object alpiste {
 	method teEncontro(alguien){
 		alguien.encuentraComida(self)
 		game.removeVisual(self)
-		game.addVisualIn(manzana, game.at(4,4) )
 	}
 }
