@@ -14,7 +14,7 @@ object roque{
 
 	method soltarComidaActual(){
 		if(self.tieneComida()){
-			comidaActual.aparecer(posicion.down(1) )
+			comidaActual.aparecer(game.at(0.randomUpTo(9),(0.randomUpTo(9))))
 			comidaActual = null
 		}
 	}
@@ -26,7 +26,9 @@ object roque{
 	method darleDeComer(unAve){
 		if(comidaActual != null){
 		unAve.come(comidaActual)
+		self.soltarComidaActual()
 		comidaActual= null
+		
 	}
 	else{game.say(self, "no tengo comida")}
 	}
