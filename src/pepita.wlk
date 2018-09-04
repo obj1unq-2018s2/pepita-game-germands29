@@ -2,11 +2,17 @@ import ciudades.*
 
 object pepita {
 	var property energia = 100
-	var property ciudad = buenosAires 
+	var property ciudad = null
 
 	var property posicion = game.at(3,3)
-	method imagen() = "pepita.png"
+	method imagen() {
+		
+		 if( energia < 10){ return "pepitaCanchera.png"} 
+		 if(energia > 100) {return "pepita-gorda-raw.png"}
+		 return "pepita.png"
+		 }
 
+	
 	method come(comida) {
 		energia = energia + comida.energia()
 	}
@@ -37,4 +43,5 @@ object pepita {
 		alguien.darleDeComer(self)
 		
 	}
+
 }
