@@ -14,7 +14,7 @@ object roque{
 
 	method soltarComidaActual(){
 		if(self.tieneComida()){
-			comidaActual.aparecer()
+			comidaActual.aparecer(posicion.down(1) )
 			comidaActual = null
 		}
 	}
