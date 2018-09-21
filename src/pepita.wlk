@@ -23,12 +23,14 @@ object pepita {
 				
 				else{ game.say(self ,"ya estoy en ciudad")	}
 
+			// TODO Estás modificando la ciudad en todos los casos, sin importar si pudo volar o no.
 			ciudad = unaCiudad
 		}
 	
 	method energiaParaVolar(distancia) = 15 + 5 * distancia
 
 	method move(nuevaPosicion) {
+		// TODO Evitá las repeticiones, el cálculo de la energia está dos veces.
 		if(energia - self.energiaParaVolar(posicion.distance(nuevaPosicion)) < 0){
 			game.say(self, "dame de comer")
 			

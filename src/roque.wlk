@@ -14,6 +14,7 @@ object roque{
 
 	method soltarComidaActual(){
 		if(self.tieneComida()){
+			// TODO Generar una posición random podría ser una subtarea aparte, incluso responsabilidad para otro objeto.
 			comidaActual.aparecer(game.at(0.randomUpTo(9),(0.randomUpTo(9))))
 			comidaActual = null
 		}
@@ -24,9 +25,12 @@ object roque{
 	}
 
 	method darleDeComer(unAve){
+		// TODO Si hay un mensaje "tieneComida" => usalo!
 		if(comidaActual != null){
 		unAve.come(comidaActual)
 		self.soltarComidaActual()
+		// TODO ¿Cuántas veces hacés comidaActual = null?
+		// Es un mal síntoma, parece que no tenés 100% control de lo que hace tu programa.
 		comidaActual= null
 		
 	}
